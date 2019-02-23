@@ -1,10 +1,10 @@
 const HDWalletProvider = require('truffle-hdwallet-provider');
 const Web3 = require('web3');
-const { interface, bytecode} = require('./compile');
+const { interface, bytecode } = require('./compile');
 
 const provider = new HDWalletProvider(
-    'can cassava nest in discriminate rick aspect on earth car hole parachute',
-    'https://rinkeby.infura.io/v3/9fa90fb334155af43768e5148f'
+    'combine banana nest process decorate pumpkin aspect ribbon earth front hole call',
+    'https://rinkeby.infura.io/v3/f639fa90fb334155af43768e5148f88e'
 );
 const web3 = new Web3(provider);
 
@@ -14,8 +14,9 @@ const deploy = async () => {
 
     const result = await new web3.eth.Contract(JSON.parse(interface))
       .deploy({ data: bytecode })
-      .send({from: accounts[0], gas: 1000000 });
+      .send({ from: accounts[0], gas: '1000000' });
     
+    console.log(interface);
     console.log('Contract deployed to', result.options.address);
 };
 deploy();
